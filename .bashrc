@@ -116,15 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-# history
-HISTSIZE=100000
-HISTFILESIZE=1000000
-HISTTIMEFORMAT='%y/%m/%d %H:%M:%S  '
-HISTIGNORE=ls:history
-export HISTSIZE HISTSIZE HISTTIMEFORMAT HISTIGNORE
-
-
 # git
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion

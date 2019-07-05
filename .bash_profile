@@ -21,17 +21,12 @@ alias c='clear'
 # locale
 export LANG=ja_JP.UTF-8
 
-# PHP path
-export PATH="/usr/local/opt/php@7.1/bin:$PATH"
-export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# sdk setting
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+# histort
+HISTSIZE=100000
+HISTFILESIZE=1000000
+HISTTIMEFORMAT='%y/%m/%d %H:%M:%S  '
+HISTIGNORE=ls:histroy
+export HISTSIZE HISTFILESIZE HISTTIMEFORMAT HISTIGNORE
 
 # git setting
 # git-completion.bash / git-prompt.sh
@@ -50,6 +45,18 @@ GIT_PS1_SHOWUPSTREAM=auto
 
 # プロンプト表示設定
 export PS1="\[\033[36m\]\u@\h\[\033[33m\] \w\033[31m\]$(__git_ps1) \n\[\033[34m\]\$\[\033[00m\] "
+
+# PHP path
+export PATH="/usr/local/opt/php@7.1/bin:$PATH"
+export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# sdk setting
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/google-cloud-sdk/path.bash.inc"; fi

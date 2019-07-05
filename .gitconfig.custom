@@ -1,0 +1,22 @@
+[core]
+  repositoryformatversion = 0
+  filemode = true
+  bare = false
+  logallrefupdates = true
+  ignorecase = false
+  precomposeunicode = false
+  autocrlf = false
+  quotepath = false
+  editor = vim
+[push]
+  default = current
+[alias]
+	st = status
+  sts = status -s
+	co = checkout
+	br = branch
+	cm = commit
+	df = diff
+  lg = log --oneline --graph -8
+[color]
+	ui = auto
