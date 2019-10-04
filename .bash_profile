@@ -3,6 +3,9 @@ if [ -f ~/.bashrc ] ; then
 . ~/.bashrc
 fi
 
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+
 # enable color support of ls
 alias ls='ls -G'
 alias grep='grep -G'
@@ -30,8 +33,8 @@ export HISTSIZE HISTFILESIZE HISTTIMEFORMAT HISTIGNORE
 
 # git setting
 # git-completion.bash / git-prompt.sh
-source $HOME/.git-completion.bash
-source $HOME/.git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash
 
 # add、commitがされていない時に「*」「+」で表示
 GIT_PS1_SHOWDIRTYSTATE=true
@@ -44,7 +47,7 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 
 # プロンプト表示設定
-export PS1="\[\033[36m\]\u@\h\[\033[33m\] \w\033[31m\]$(__git_ps1) \n\[\033[34m\]\$\[\033[00m\] "
+export PS1='\[\033[36m\]\u@\h\[\033[33m\] \w\033[31m\]$(__git_ps1 " (%s)") \n\[\033[34m\]\$\[\033[00m\] '
 
 # PHP path
 export PATH="/usr/local/opt/php@7.1/bin:$PATH"
