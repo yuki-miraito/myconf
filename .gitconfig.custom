@@ -17,12 +17,17 @@
 	ff = only
 [alias]
 	st = status
-  sts = status -s
+  sts = status -sb
 	co = checkout
 	br = branch
 	cm = commit
 	df = diff
   lg = log --oneline --graph -10
   lgb = log --oneline --graph --branches -15
+  lgr= log --oneline --graph --remotes -15
+  ss = stash
+  sw = switch
+  ft = fetch -p --all
+  brd = !git branch --merged | egrep -v '\\*|master|development|miraito-master|production|Sprint-*|features/MEZON-*' | xargs git branch -d
 [color]
 	ui = auto
