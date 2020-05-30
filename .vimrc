@@ -254,3 +254,4 @@ set scrolloff=5 " スクロールする時に下が見えるようにする
 
 inoremap jj <esc>
 
+set clipboard+=unnamed
